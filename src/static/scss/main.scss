@@ -5,9 +5,8 @@
 
 /******************* sportmpro *******************/
 
-/*
-@import 'sportmpro/header';
-@import "sportmpro/nav";
+//@import 'sportmpro/header';
+//@import "sportmpro/nav";
 @import "sportmpro/breadcrumbs";
 @import "sportmpro/card";
 @import "sportmpro/partners";
@@ -22,14 +21,12 @@
 @import "sportmpro/examples";
 @import "sportmpro/base-steps";
 @import "sportmpro/seo-text";
-*/
 
 
 /******************* vetklinika72 *******************/
-/*
 
-@import 'vetklinika72/header';
-@import "vetklinika72/nav";
+//@import 'vetklinika72/header';
+//@import "vetklinika72/nav";
 @import "vetklinika72/base-offer";
 @import "vetklinika72/service";
 @import "vetklinika72/symptoms";
@@ -40,7 +37,6 @@
 @import "vetklinika72/reviews";
 @import "vetklinika72/help";
 @import "vetklinika72/footer";
-*/
 
 
 
@@ -59,16 +55,23 @@
 @import 'pro-burim72/photo';
 @import 'pro-burim72/clients';
 @import 'pro-burim72/reviews';
-@import 'pro-burim72/header';
-@import 'pro-burim72/nav';
+//@import 'pro-burim72/header';
+//@import 'pro-burim72/nav';
 @import 'pro-burim72/search';
+
+
+/******************* anadolu *******************/
+
+@import 'anadolu/header';
+@import 'anadolu/nav';
+
 
 
 
 /******************* it-all-style *******************/
 
 .it-container {
-  max-width: 1030px;
+  max-width: 1200px;
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
@@ -205,16 +208,14 @@
   text-align: center;
   user-select: none;
   border: none;
-  padding: 8.5px 10px;
-  font-size: 15px;
+  padding: 11.5px 10px;
+  font-size: 14px;
   transition: all 0.2s ease-in-out;
   background-color: $main-color;
   color: #ffffff;
   cursor: pointer;
   text-decoration: none;
-  border-radius: 3px;
   position: relative;
-  text-transform: uppercase;
 }
 
 .it-btn:hover {

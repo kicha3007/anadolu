@@ -1,0 +1,108 @@
+@import "../__vars";
+@import "../__mixins";
+@import "../smart-grid";
+
+.it-header {
+  background-color: #F3F3F3;
+}
+
+.it-header__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 0 5px;
+}
+
+.it-header__half {
+  flex-grow: 1;
+}
+
+.it-header__half--left {
+  max-width: 205px;
+
+  flex-basis: 150px;
+}
+
+.it-header__half--right {
+  flex-basis: 700px;
+
+}
+
+.it-logo {
+  display: block;
+  text-decoration: none;
+}
+
+.it-logo:hover {
+  text-decoration: none;
+}
+
+.it-logo:active,
+.it-logo:visited {
+  text-decoration: none;
+}
+
+.it-logo__img-box {
+  max-width: 205px;
+  width: 100%;
+  max-height: 70px;
+}
+
+.it-logo__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.it-header__top {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  margin:  0 -35px;
+  overflow: hidden;
+}
+
+.it-header__top-half {
+  margin: 0 35px;
+
+}
+
+.it-header__top-half--right {
+  max-width: 150px;
+  flex-grow: 1;
+}
+
+.it-phone__text {
+  color: #1AACCE;
+  font-size: rem(18px);
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.it-phone__text + .it-phone__text {
+  margin-left: 30px;
+}
+
+.it-phone__text:hover {
+  color: #1AACCE;
+  text-decoration: none;
+}
+
+.it-phone__text:active,
+.it-phone__text:visited {
+  color: #1AACCE;
+  text-decoration: none;
+}
+
+.it-phone__text b {
+  color: #1AACCE;
+}
+
+
+
+.it-header__buttons {
+
+  width: 100%;
+}
+
