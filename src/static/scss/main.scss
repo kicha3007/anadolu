@@ -12,11 +12,11 @@
 @import "sportmpro/partners";
 @import "sportmpro/about-us";
 @import "sportmpro/photo";
-@import "sportmpro/callback";
+//@import "sportmpro/callback";
 @import "sportmpro/modal";
 @import "sportmpro/tabs";
 @import "sportmpro/advantages";
-@import "sportmpro/base-offer";
+//@import "sportmpro/base-offer";
 @import "sportmpro/base-card";
 @import "sportmpro/examples";
 @import "sportmpro/base-steps";
@@ -27,10 +27,10 @@
 
 //@import 'vetklinika72/header';
 //@import "vetklinika72/nav";
-@import "vetklinika72/base-offer";
+//@import "vetklinika72/base-offer";
 @import "vetklinika72/service";
 @import "vetklinika72/symptoms";
-@import "vetklinika72/callback";
+//@import "vetklinika72/callback";
 @import "vetklinika72/about-us";
 @import "vetklinika72/gallery";
 @import "vetklinika72/doctors";
@@ -42,7 +42,7 @@
 
 /******************* pro-burim72 *******************/
 
-@import 'pro-burim72/base-offer';
+//@import 'pro-burim72/base-offer';
 @import 'pro-burim72/price';
 @import 'pro-burim72/advantages';
 @import 'pro-burim72/discount';
@@ -50,20 +50,26 @@
 @import 'pro-burim72/about-us';
 @import 'pro-burim72/schema';
 @import 'pro-burim72/factors';
-@import 'pro-burim72/callback';
+//@import 'pro-burim72/callback';
 @import 'pro-burim72/technics';
 @import 'pro-burim72/photo';
 @import 'pro-burim72/clients';
 @import 'pro-burim72/reviews';
 //@import 'pro-burim72/header';
 //@import 'pro-burim72/nav';
-@import 'pro-burim72/search';
+//@import 'pro-burim72/search';
 
 
 /******************* anadolu *******************/
 
 @import 'anadolu/header';
 @import 'anadolu/nav';
+@import 'anadolu/base-offer';
+@import 'anadolu/callback';
+@import 'anadolu/base-form';
+@import 'anadolu/sub-offer';
+@import 'anadolu/search';
+@import 'anadolu/directions';
 
 
 
