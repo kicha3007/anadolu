@@ -196,16 +196,16 @@ $("[data-file-default]").change(function () {
 
 /* ****************************** dropdown-menu ****************************** */
 
-    var $trigger = $('[data-trigger="1"]');
-    var $nav = $('[data-it-nav]');
-    var $this = $(this);
-
+    var $trigger = $('[data-trigger]');
 
     $trigger.on("click", function () {
-        $trigger.toggleClass('active');
+        var $this = $(this);
+        $this.toggleClass('active');
+        $triggerName = $this.data("trigger");
+        var $nav = $("[data-it-nav='" + $triggerName  + "']");
         $nav.slideToggle(600, function () {
-            if ($(this).css("display") === "none") {
-                $(this).removeAttr("style");
+            if ($this.css("display") === "none") {
+                $this.removeAttr("style");
             }
         });
 
