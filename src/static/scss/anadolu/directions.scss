@@ -3,6 +3,11 @@
 @import "../smart-grid";
 
 
+.it-directions {
+  width: 100%;
+  flex-grow: 1;
+}
+
 .it-directions__trigger-wrap {
   display: flex;
   align-items: flex-start;
