@@ -1,0 +1,39 @@
+@import "../__vars";
+@import "../__mixins";
+@import "../smart-grid";
+
+.it-video__wrap {
+  @include row-flex();
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.it-video__item {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+  @include col();
+  @include size(6);
+  @include size-xs(12);
+  position: relative;
+  margin-bottom: 40px;
+
+}
+
+.it-video__title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: #1AACCE;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 20px 20px;
+  text-align: center;
+}
+
+.it-video__link-wrap {
+  text-align: center;
+}

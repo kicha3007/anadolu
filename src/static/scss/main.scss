@@ -15,7 +15,7 @@
 //@import "sportmpro/callback";
 @import "sportmpro/modal";
 @import "sportmpro/tabs";
-@import "sportmpro/advantages";
+//@import "sportmpro/advantages";
 //@import "sportmpro/base-offer";
 @import "sportmpro/base-card";
 @import "sportmpro/examples";
@@ -43,8 +43,8 @@
 /******************* pro-burim72 *******************/
 
 //@import 'pro-burim72/base-offer';
-@import 'pro-burim72/price';
-@import 'pro-burim72/advantages';
+//@import 'pro-burim72/price';
+//@import 'pro-burim72/advantages';
 @import 'pro-burim72/discount';
 @import 'pro-burim72/services';
 @import 'pro-burim72/about-us';
@@ -71,6 +71,8 @@
 @import 'anadolu/search';
 @import 'anadolu/directions';
 @import 'anadolu/advantages';
+@import 'anadolu/video';
+@import 'anadolu/price';
 
 
 
@@ -101,18 +103,17 @@
 
 .it-all-title {
   text-align: center;
-  padding-top: 80px;
+  padding-top: 60px;
   padding-bottom: 40px;
-  font-size: rem(26px);
+  font-size: rem(32px);
   line-height: 1.4;
   position: relative;
-  color: #444444;
+  color: #000000;
   margin: 0;
-  text-transform: uppercase;
   overflow: hidden;
 
   @include tablets {
-    padding-top: 60px;
+    padding-top: 50px;
     padding-bottom: 30px;
   }
   @include phones {
@@ -153,8 +154,10 @@
 
 
 .it-all-subtitle {
-  font-size: rem(16px);
+  font-size: rem(18px);
   padding-bottom: 40px;
+  color: rgba(0, 0, 0, 0.54);
+  text-align: center;
   @include phones {
     padding-bottom: 20px;
   }
@@ -258,6 +261,23 @@
   padding-left: 15px;
 }
 
+
+.it-all-link {
+  color: #1AACCE;
+  font-size: 14px;
+  font-weight: 300;
+  text-decoration: underline;
+}
+
+.it-all-link:hover {
+  color: #1AACCE;
+	text-decoration: none;
+}
+
+.it-all-link:active,
+.it-all-link:visited {
+  color: #1AACCE;
+}
 
 
 /******************* media *******************/
