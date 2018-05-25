@@ -73,6 +73,7 @@
 @import 'anadolu/advantages';
 @import 'anadolu/video';
 @import 'anadolu/price';
+@import 'anadolu/compare';
 
 
 
@@ -80,10 +81,15 @@
 /******************* it-all-style *******************/
 
 .it-container {
-  max-width: 1200px;
-  width: 100%;
-  padding: 0 15px;
-  margin: 0 auto;
+   max-width: 1200px;
+   width: 100%;
+   padding: 0 15px;
+   margin: 0 auto;
+ }
+
+.it-container--min {
+  max-width: 880px;
+
 }
 
 .it-container * {
