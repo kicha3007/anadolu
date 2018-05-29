@@ -1,32 +1,28 @@
-/* ------------------- steps ------------------- */
 
-$(document).on("scroll", function () {
-
-    $("[data-step-item]").each(function () {
-        if (window.scrollY > this.offsetTop - 700) {
-
-            $(this).addClass("active");
-        }
-
-    })
-});
-
-
-/* ------------------- fancybox ------------------- */
-
-$("[data-fancybox]").fancybox({
-    padding: 0,
-    helpers: {
-        overlay: {
-            locked: false
-        }
-    }
-});
 
 /* ****************************** accordion ****************************** */
 
 
 $(function () {
+
+
+
+
+    /* ------------------- fancybox ------------------- */
+
+
+    $("[data-fancybox]").fancybox({
+        padding: 0,
+        helpers: {
+            overlay: {
+                locked: false
+            }
+        }
+    });
+
+
+
+
     var $accordWrap = $("[data-it-accord-wrap]");
     var $accordItem = $("[data-it-accord-item]");
     var $accordToggle = $("[data-it-accord-toggle]");
@@ -166,7 +162,7 @@ $(function () {
 
 
 
-});
+
 
 /* ------------------- mask ------------------- */
 
@@ -211,5 +207,26 @@ $("[data-file-default]").change(function () {
 
     });
 
+$("[data-slick-show-big]").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '[data-slick-previews]'
+    });
 
 
+    $('[data-slick-previews]').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        asNavFor: '[data-slick-show-big]',
+        dots: false,
+       // centerMode: true,
+        focusOnSelect: true
+});
+
+
+
+
+
+});

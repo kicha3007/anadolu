@@ -1,0 +1,163 @@
+@import "../__vars";
+@import "../__mixins";
+@import "../smart-grid";
+
+
+
+.it-doctors__wrap {
+  margin: 0;
+  padding: 0 0 110px;
+}
+
+.it-doctors__item {
+  list-style-type: none;
+  padding-left: 0;
+  @include row-flex();
+  justify-content: center;
+  margin-bottom: -40px;
+}
+
+.it-doctors__half {
+  margin-bottom: 40px;
+}
+
+.it-doctors__half--left {
+  @include col();
+  @include size(4);
+  @include size-xs(12);
+}
+
+.it-doctors__half--right {
+  @include col();
+  @include size(8);
+  @include size-xs(12);
+
+
+}
+
+.it-doctors__title {
+  font-size: rem(24px);
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+
+.it-doctors__subtitle {
+  color: #000000;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+
+.it-doctors__video-box {
+  width: 100%;
+  max-height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  @include phones {
+      margin: 0 auto;
+  }
+
+
+}
+
+.it-doctors__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+.it-doctors__desc {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.54);
+  margin-bottom: 35px;
+  font-weight: 300;
+  line-height: 1.5;
+  max-width: 550px;
+}
+
+
+/******************* doctors+owl *******************/
+
+.it-doctors .owl-carousel .owl-nav {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  max-width: 200px;
+  margin-left: -100px;
+  width: 100%;
+
+
+}
+
+.it-doctors .owl-carousel .owl-next, .it-doctors .owl-carousel .owl-prev {
+  width: 40px;
+  height: 40px;
+  font-size: 0;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%
+
+
+}
+
+.it-doctors .owl-carousel .owl-next:hover, .it-doctors .owl-carousel .owl-prev:hover {
+  opacity: .5
+}
+
+.it-doctors .owl-carousel .owl-next:after, .it-doctors .owl-carousel .owl-prev:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: url("../img/vetklinika72/base/arrow.png") 51% no-repeat;
+}
+
+.it-doctors .owl-carousel .owl-prev:after {
+  transform: scale(-1);
+
+}
+
+.it-doctors .owl-carousel .owl-next:after {
+  transform: scale(1);
+}
+
+.it-doctors .owl-carousel .owl-prev {
+  float: left;
+}
+
+.it-doctors .owl-carousel .owl-next {
+  float: right;
+}
+
+/******************* doctors+owl-dots *******************/
+
+.it-doctors .owl-carousel .owl-dots {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  z-index: 10000;
+  max-width: 120px;
+  width: 100%;
+  margin-left: -60px;
+  text-align: center;
+}
+
+.it-doctors .owl-carousel .owl-dots .owl-dot {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #ffffff;
+  background: #B5B5B5;
+  border-radius: 50%;
+  transition: .2s;
+  margin: 0 8px;
+}
+
+.it-doctors .owl-carousel .owl-dots .owl-dot.active, .it-doctors .owl-carousel .owl-dots .owl-dot:hover {
+  background-color: #1AACCE;
+  border-color: #1AACCE;
+}

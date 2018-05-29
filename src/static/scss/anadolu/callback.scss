@@ -4,27 +4,75 @@
 
 /******************* callback *******************/
 
+
 .it-callback {
-  background-color: #ffffff;
+  background-color: #E8F0F4;
 }
 
-.it-callback__wrap {
+.it-callback__outer-wrap {
+  @include row-flex();
+  padding: 35px 0;
+  margin-bottom: -20px;
   overflow: hidden;
-  padding: 4% 0;
 }
 
-.it-callback-title {
-  font-size: rem(36px);
+.it-callback__outer-half {
+  @include col();
+  @include size-xs(12);
   margin-bottom: 20px;
-  text-align: center;
-  color: #ffffff;
 }
 
-.it-callback-subtitle {
+.it-callback__outer-half--left {
+  @include size(10);
+  @include size-lg(9);
+  @include size-md(8);
+}
+
+.it-callback__outer-half--right {
+  @include size(2);
+  @include size-lg(3);
+  @include size-md(4);
+}
+
+.it-callback__titme {
+  color: rgba(0, 0, 0, 0.38);
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+
+.it-callback__phone {
+
+
+  
+}
+
+.it-callback__phone-text {
+  text-decoration: none;
+  line-height: 1.2;
+  color:#000000 ;
   font-size: rem(18px);
-  text-align: center;
-  color: #ffffff;
-  margin-bottom: 35px;
+  font-weight: 700;
+
+}
+
+.it-callback__phone-text:hover {
+	color: #000000;
+	text-decoration: none;
+}
+
+.it-callback__phone-text:active,
+.it-callback__phone-text:visited {
+	color: #000000;
+	text-decoration: none;
+}
+
+
+.it-callback__title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #000000;
 }
 
 .it-callback__form {
@@ -45,21 +93,20 @@
 .it-callback__input-wrap {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: flex-start;
-  margin: 0 -10px 0;
+  margin: 0 -20px 0;
   overflow: hidden;
 }
 
 .it-callback__half {
   flex-grow: 1;
-  flex-basis: 190px;
+  flex-basis: 160px;
   width: 100%;
-  margin: 0 10px 25px;
-  max-width: 240px;
+  margin: 0 20px 25px;
+  max-width: 363px;
   @include phones {
-      max-width: 250px;
-      flex-basis: 250px;
+      max-width: 100%;
+      flex-basis: 100%;
   }
 }
 
@@ -82,7 +129,7 @@
 
 .it-callback__input {
   font-size: 14px;
-  padding: 8px 20px;
+  padding: 9.5px 20px;
   color: rgba(0, 0, 0, 0.38);
   width: 100%;
   line-height: 1.42;
@@ -90,14 +137,14 @@
 }
 
 .it-callback__buttons {
-  max-width: 135px;
+  max-width: 160px;
   width: 100%;
   margin-top: auto;
   flex-grow: 1;
   flex-basis: 120px;
   @include phones {
-    max-width: 250px;
-    flex-basis: 250px;
+    max-width: 100%;
+    flex-basis: 100%;
   }
 }
 
@@ -202,18 +249,10 @@
 
 .it-callback__checkbox-wrap {
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin: 0 0 5px;
+  margin: 0;
 }
 
 .it-checkbox--size {
