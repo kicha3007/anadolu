@@ -318,6 +318,14 @@
 }
 
 
+.it--show-mobile {
+  display: none;
+  @include phones {
+    display: block;
+  }
+}
+
+
 /******************* media *******************/
 
 @media (max-width: 1200px) { /*desctop*/

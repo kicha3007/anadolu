@@ -40,17 +40,35 @@
   margin-bottom: 40px;
 }
 
+.it-base-offer__half--right {
+  @include phones {
+    display: none;
+  }
+}
+
+.it-base-offer__content {
+  @include phones {
+    text-align: center;
+  }
+}
+
 .it-base-offer__title {
   font-size: rem(38px);
   color: #ffffff;
   font-weight: 700;
   margin-bottom: 25px;
+  @include phones {
+    font-size: 24px;
+  }
 }
 
 .it-base-offer__desc {
   color: #FFFFFF;
   font-size: rem(24px);
   margin-bottom: 25px;
+  @include phones {
+    font-size: 14px;
+  }
   
 }
 
@@ -61,6 +79,9 @@
 .it-base-offer__info-list {
   margin: 0;
   padding: 0;
+  @include phones {
+    display: none;
+  }
 }
 
 .it-base-offer__info-item {
@@ -96,4 +117,10 @@
 }
 .it-base-offer__info-item--icon-2:before {
   background-image: url("../img/anadolu/base-offer/decoration/2.png");
+}
+
+.it-base-offer__btn {
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 700;
 }

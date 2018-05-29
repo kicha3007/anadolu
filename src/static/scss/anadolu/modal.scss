@@ -20,6 +20,11 @@
   padding: 7% 7%;
 }
 
+.it-modal__content {
+  padding: 7% 7%;
+}
+
+
 .it-modal__img-box {
   border-radius: 50%;
   background-color: #ffffff;
@@ -57,3 +62,16 @@
   color: #ffffffff;
 }
 
+.it-modal__callback-title {
+  color: #000000;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.it-modal__callback-half {
+  margin-bottom: 25px;
+}
+
+.it-modal__checkbox-wrap {
+  margin-bottom: 30px;
+}

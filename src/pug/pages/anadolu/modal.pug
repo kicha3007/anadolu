@@ -17,16 +17,20 @@ section.it-modal.it-modal--size#it-modal-callback
 			form.it-callback__form(action="", method="post")
 				.it-modal__callback-title
 					|	Ваше имя:
-				input.it-callback__input(type="text" name='NAME', maxlength='200', value='', placeholder='Имя и фамилия', required)
+				.it-modal__callback-half
+					input.it-callback__input(type="text" name='NAME', maxlength='200', value='', placeholder='Имя и фамилия', required)
 				.it-modal__callback-title
 					|   Ваш телефон: Ваше имя:
-				input.it-callback__input(type='tel', name='PHONE', maxlength='200', value='', placeholder='Ваш телефон', data-phone='true', required,)
-				.it-checkbox-wrap.it-callback__checkbox-wrap
+				.it-modal__callback-half
+					input.it-callback__input(type='tel', name='PHONE', maxlength='200', value='', placeholder='Ваш телефон', data-phone='true', required,)
+				.it-checkbox-wrap.it-callback__checkbox-wrap.it-modal__checkbox-wrap
 					label.it-checkbox
 						input.it-checkbox__default(type="checkbox" name="AGREE" checked)
 						span.it-checkbox__pseudo
 						span.it-checkbox__text
-							|    Подтверждаю свое согласие на обработку персональных данных
+							|    Подтверждаю свое согласие на обработку
+							br
+							|	персональных данных
 				a(href="").it-btn.it-callback__btn Отправить
 					.it-form__success
 						| Спасибо!
