@@ -1,7 +1,4 @@
-
-
 /* ****************************** accordion ****************************** */
-
 
 $(function () {
 
@@ -9,7 +6,6 @@ $(function () {
 
 
     /* ------------------- fancybox ------------------- */
-
 
     $("[data-fancybox]").fancybox({
         padding: 0,
@@ -19,9 +15,6 @@ $(function () {
             }
         }
     });
-
-
-
 
     var $accordWrap = $("[data-it-accord-wrap]");
     var $accordItem = $("[data-it-accord-item]");
@@ -46,48 +39,42 @@ $(function () {
          $(this).parent().find("[]").toggle();*/
     });
 
-
     /* ------------------- carousel-new ------------------- */
 
+    $('[data-owl-carousel]').each(function () {
+        var $this = $(this);
+        var itemsCount = $this.data("owlItems");
+        var itemsCountPad = $this.data("owlItemsPad");
+        var itemsMargin = $this.data("owlItemsMargin");
+        var itemsDots = $this.data("owlItemsDots");
+        var itemsLoop = $this.data("owlItemsLoop");
+        var itemsNav = $this.data("owlItemsNav");
+        var itemsAutoplay = $this.data("owlItemsAutoplay");
+        var itemsAutoplayTimeout = $this.data("owlItemsAutoplayTimeout");
+        var itemsAutoplayHoverPause = $this.data("owlItemsAutoplayHoverPause");
 
-
-
-        $('[data-owl-carousel]').each(function () {
-            var $this = $(this);
-            var itemsCount = $this.data("owlItems");
-            var itemsCountPad = $this.data("owlItemsPad");
-            var itemsMargin = $this.data("owlItemsMargin");
-            var itemsDots = $this.data("owlItemsDots");
-            var itemsLoop = $this.data("owlItemsLoop");
-            var itemsNav = $this.data("owlItemsNav");
-            var itemsAutoplay = $this.data("owlItemsAutoplay");
-            var itemsAutoplayTimeout = $this.data("owlItemsAutoplayTimeout");
-            var itemsAutoplayHoverPause = $this.data("owlItemsAutoplayHoverPause");
-
-            $this.owlCarousel({
-                items: (itemsCount ? itemsCount : 1),
-                margin: (itemsMargin ? itemsMargin : 20),
-                nav: (itemsNav ? itemsNav : true),
-                loop: (itemsLoop ? itemsLoop : true),
-                autoplay: (itemsAutoplay ? itemsAutoplay : true),
-                autoplayTimeout: (itemsAutoplayTimeout ? itemsAutoplayTimeout : 3000),
-                autoplayHoverPause: (itemsAutoplayHoverPause ? itemsAutoplayHoverPause : true),
-                dots: (itemsDots ? itemsDots : false),
-                responsive: {
-                    0: {
-                        items: 1
-                    },
-                    600: {
-                        items: itemsCountPad ? itemsCountPad : (itemsCount ? itemsCount : 1)
-                    },
-                    1000: {
-                        items: itemsCount ? itemsCount : 1
-                    }
+        $this.owlCarousel({
+            items: (itemsCount ? itemsCount : 1),
+            margin: (itemsMargin ? itemsMargin : 20),
+            nav: (itemsNav ? itemsNav : true),
+            loop: (itemsLoop ? itemsLoop : true),
+            autoplay: (itemsAutoplay ? itemsAutoplay : false),
+            autoplayTimeout: (itemsAutoplayTimeout ? itemsAutoplayTimeout : 3000),
+            autoplayHoverPause: (itemsAutoplayHoverPause ? itemsAutoplayHoverPause : false),
+            dots: (itemsDots ? itemsDots : false),
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: itemsCountPad ? itemsCountPad : (itemsCount ? itemsCount : 1)
+                },
+                1000: {
+                    items: itemsCount ? itemsCount : 1
                 }
-            });
+            }
         });
-
-
+    });
 
     /* ------------------- ajax ------------------- */
 
@@ -108,7 +95,7 @@ $(function () {
                     $form.find($(".it-form__success")).html(data.message);
                 },
 
-                error: function() {
+                error: function () {
                     $form.addClass("success");
                     $form.find($(".it-form__success")).html("Извините, временные проблемы на сервере, попробуйте ещё раз!");
 
@@ -116,7 +103,6 @@ $(function () {
             }
         )
     });
-
 
     /* ------------------- switcher ------------------- */
 
@@ -147,7 +133,6 @@ $(function () {
 
     /* ------------------- показываем выпадающее меню в табах ------------------- */
 
-
     $("[data-min-nav]").on("click", function () {
         $("[data-min-nav-dropdown]").toggle();
     });
@@ -157,40 +142,25 @@ $(function () {
         $("[data-min-nav-title]").text(minNavItemVal);
         $("[data-min-nav-dropdown]").hide();
 
-    })
+    });
 
+    /* ------------------- mask ------------------- */
 
+    $("[data-phone]").mask("+7 (999) 99-99-999");
 
+    /* ****************************** add-file ****************************** */
 
+    $("[data-file-default]").change(function () {
+        var f_name = [];
 
+        for (var i = 0; i < $(this).get(0).files.length; ++i) {
+            f_name.push(' ' + $(this).get(0).files[i].name);
+        }
 
-/* ------------------- mask ------------------- */
+        $(this).parent().find("[data-file-name]").text(f_name.join(', '));
+    });
 
-$("[data-phone]").mask("+7 (999) 99-99-999");
-
-
-
-
-
-
-
-
-
-
-/* ****************************** add-file ****************************** */
-
-$("[data-file-default]").change(function () {
-    var f_name = [];
-
-    for (var i = 0; i < $(this).get(0).files.length; ++i) {
-        f_name.push(' ' + $(this).get(0).files[i].name);
-    }
-
-    $(this).parent().find("[data-file-name]").text(f_name.join(', '));
-});
-
-
-/* ****************************** dropdown-menu ****************************** */
+    /* ****************************** dropdown-menu ****************************** */
 
     var $trigger = $('[data-trigger]');
 
@@ -198,7 +168,7 @@ $("[data-file-default]").change(function () {
         var $this = $(this);
         $this.toggleClass('active');
         $triggerName = $this.data("trigger");
-        var $nav = $("[data-it-nav='" + $triggerName  + "']");
+        var $nav = $("[data-it-nav='" + $triggerName + "']");
         $nav.slideToggle(600, function () {
             if ($this.css("display") === "none") {
                 $this.removeAttr("style");
@@ -207,26 +177,51 @@ $("[data-file-default]").change(function () {
 
     });
 
-$("[data-slick-show-big]").slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    asNavFor: '[data-slick-previews]'
-    });
 
+    $("[data-slick-show-big]").slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        edgeFriction: true,
+        centerMode: true
+
+
+    });
 
     $('[data-slick-previews]').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
         asNavFor: '[data-slick-show-big]',
         dots: false,
-       // centerMode: true,
+        edgeFriction: true,
         focusOnSelect: true
-});
+    });
 
 
+    /* ------------------- show-more ------------------- */
+
+    var showMoreButtonText = $("[data-show-more-button]");
 
 
+$("[data-it-accord-wrap-item]").hide();
+
+    showMoreButtonText.on("click", function (e) {
+        e.preventDefault();
+
+        var $this = $(this);
+
+        var showMoreButtonCloseText = $this.data("showMoreButton");
+        var showMoreButtonCloseTextToButton = $this.children("[data-show-more-text]").text();
+
+        $this.children("[data-show-more-text]").text(showMoreButtonCloseText);
+        $this.data("showMoreButton", showMoreButtonCloseTextToButton);
+
+        var showMoreButtonValue = $this.data("showMoreButton");
+        var showMoreText = $this.data("showBlock");
+        $("[" + showMoreText + "]").slideToggle();
+        $this.toggleClass("active");
+
+    });
 
 });

@@ -1,0 +1,34 @@
+section.it-modal#it-modal-questionary
+	include base-form
+
+section.it-modal.it-modal--size#it-modal-callback
+	.it-modal__wrap
+		.it-modal__top
+			.it-modal__half.it-modal__half--left
+				.it-modal__img-box
+					img(src="static/img/anadolu/modal/1.png", alt='').it-modal__img
+			.it-modal__half.it-modal__half--right
+				.it-modal__title
+					|	Обратный звонок
+				.it-modal__desc
+					|    Оставьте контактные данные,
+					| и мы вам перезвоним в течении 15 минут!
+		.it-modal__content
+			form.it-callback__form(action="", method="post")
+				.it-modal__callback-title
+					|	Ваше имя:
+				input.it-callback__input(type="text" name='NAME', maxlength='200', value='', placeholder='Имя и фамилия', required)
+				.it-modal__callback-title
+					|   Ваш телефон: Ваше имя:
+				input.it-callback__input(type='tel', name='PHONE', maxlength='200', value='', placeholder='Ваш телефон', data-phone='true', required,)
+				.it-checkbox-wrap.it-callback__checkbox-wrap
+					label.it-checkbox
+						input.it-checkbox__default(type="checkbox" name="AGREE" checked)
+						span.it-checkbox__pseudo
+						span.it-checkbox__text
+							|    Подтверждаю свое согласие на обработку персональных данных
+				a(href="").it-btn.it-callback__btn Отправить
+					.it-form__success
+						| Спасибо!
+						br
+						|  Ваша заявка принята.

@@ -5,59 +5,65 @@
 
 /******************* sportmpro *******************/
 
-//@import 'sportmpro/header';
-//@import "sportmpro/nav";
+/*
+@import 'sportmpro/header';
+@import "sportmpro/nav";
 @import "sportmpro/breadcrumbs";
 @import "sportmpro/card";
 @import "sportmpro/partners";
 @import "sportmpro/about-us";
 @import "sportmpro/photo";
-//@import "sportmpro/callback";
+@import "sportmpro/callback";
 @import "sportmpro/modal";
 @import "sportmpro/tabs";
-//@import "sportmpro/advantages";
-//@import "sportmpro/base-offer";
+@import "sportmpro/advantages";
+@import "sportmpro/base-offer";
 @import "sportmpro/base-card";
 @import "sportmpro/examples";
 @import "sportmpro/base-steps";
 @import "sportmpro/seo-text";
+*/
 
 
 /******************* vetklinika72 *******************/
+/*
 
-//@import 'vetklinika72/header';
-//@import "vetklinika72/nav";
-//@import "vetklinika72/base-offer";
+@import 'vetklinika72/header';
+@import "vetklinika72/nav";
+@import "vetklinika72/base-offer";
 @import "vetklinika72/service";
 @import "vetklinika72/symptoms";
-//@import "vetklinika72/callback";
+@import "vetklinika72/callback";
 @import "vetklinika72/about-us";
 @import "vetklinika72/gallery";
-//@import "vetklinika72/doctors";
-//@import "vetklinika72/reviews";
+@import "vetklinika72/doctors";
+@import "vetklinika72/reviews";
 @import "vetklinika72/help";
 @import "vetklinika72/footer";
 
+*/
 
 
 /******************* pro-burim72 *******************/
 
-//@import 'pro-burim72/base-offer';
-//@import 'pro-burim72/price';
-//@import 'pro-burim72/advantages';
+/*
+@import 'pro-burim72/base-offer';
+@import 'pro-burim72/price';
+@import 'pro-burim72/advantages';
 @import 'pro-burim72/discount';
 @import 'pro-burim72/services';
 @import 'pro-burim72/about-us';
 @import 'pro-burim72/schema';
 @import 'pro-burim72/factors';
-//@import 'pro-burim72/callback';
+@import 'pro-burim72/callback';
 @import 'pro-burim72/technics';
 @import 'pro-burim72/photo';
 @import 'pro-burim72/clients';
-//@import 'pro-burim72/reviews';
-//@import 'pro-burim72/header';
-//@import 'pro-burim72/nav';
-//@import 'pro-burim72/search';
+@import 'pro-burim72/reviews';
+@import 'pro-burim72/header';
+@import 'pro-burim72/nav';
+@import 'pro-burim72/search';
+*/
 
 
 /******************* anadolu *******************/
@@ -79,6 +85,10 @@
 @import 'anadolu/doctors';
 @import 'anadolu/reviews';
 @import 'anadolu/residence';
+@import 'anadolu/answers';
+@import 'anadolu/news';
+@import 'anadolu/footer';
+@import 'anadolu/modal';
 
 
 
@@ -101,6 +111,19 @@
   box-sizing: border-box;
 }
 
+.it-container--full {
+  @include phones {
+    max-width: 100%;
+    padding: 0;
+  }
+
+}
+
+.it-container--mobile {
+  @include phones {
+    max-width: 260px;
+  }
+}
 
 //.it-container--big {
 //  max-width: 1920px;
@@ -278,6 +301,10 @@
   font-size: 14px;
   font-weight: 300;
   text-decoration: underline;
+}
+
+.it-all-subtitle .it-all-link {
+  font-size: inherit;
 }
 
 .it-all-link:hover {
