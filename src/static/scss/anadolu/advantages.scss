@@ -2,6 +2,12 @@
 @import "../__mixins";
 @import "../smart-grid";
 
+.it-advantages__top {
+  @include phones {
+    background-color: #F3F3F3;
+  }
+}
+
 .it-advantages__wrap {
   padding: 0;
   margin: 0;
@@ -24,6 +30,9 @@
   padding-bottom: 40px;
   color: rgba(0, 0, 0, 0.54);
   text-align: center;
+  @include phones {
+    margin-top: 30px;
+  }
 }
 
 .it-advantages__list {
@@ -87,6 +96,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
+  overflow: hidden;
 }
 
 .it-advantages__img-box + .it-advantages__img-box {

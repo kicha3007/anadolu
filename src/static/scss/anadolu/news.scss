@@ -12,6 +12,9 @@
   padding: 0 0 40px;
   margin: 0 0 -40px;
   overflow: hidden;
+  @include phones {
+    padding-bottom: 0;
+  }
 }
 
 .it-news__item {
@@ -25,6 +28,7 @@
   border: 1px solid rgba(0, 0, 0, 0.2);
   @include phones {
       border: none;
+    margin-bottom: 0;
   }
 }
 
@@ -98,6 +102,9 @@
   flex-wrap: wrap;
   justify-content: center;
   text-decoration: underline;
+  @include phones {
+    display: none;
+  }
 }
 
 .it-news__show-more :hover {

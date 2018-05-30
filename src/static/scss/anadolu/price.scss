@@ -5,7 +5,7 @@
 /******************* price *******************/
 
 .it-price__desc ul,
-.it-price__wrap {
+.it-price__list {
   margin: 0;
   padding: 0;
 }
@@ -39,12 +39,23 @@
   flex-grow: 1;
   flex-basis: 185px;
   padding-left: 7%;
+  order: 1;
+  @include phones {
+      order: 2;
+    flex-basis: 100px;
+    padding-left: 10px;
+
+  }
 }
 
 .it-price__item-half--center {
   flex-basis: 155px;
   padding-left: 10px;
   max-width: 155px;
+  order: 2;
+  @include phones {
+    display: none;
+  }
 
 
 }
@@ -57,8 +68,15 @@
   padding-left: 40px;
   align-items: flex-start;
   max-width: 160px;
-  flex-basis: 160px;
+  flex-basis: 150px;
   font-weight: 700;
+  order: 3;
+
+  @include phones {
+      order: 1;
+    padding-left: 0;
+    flex-basis: 60px;
+  }
 
 }
 
@@ -71,10 +89,15 @@
   position: relative;
   background-color: #1AACCE;
   margin-top: 20px;
+  @include phones {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+  }
 }
 
 
-.it-price__wrap .it-price__item:first-child .it-price__toggle {
+.it-price__list .it-price__item:first-child .it-price__toggle {
   margin-top: 0;
 }
 
@@ -92,7 +115,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 5.2%;
+  width: 60px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -185,4 +208,11 @@
   background-color: #ffffff;
 }
 
+.it-price__buttons--show-mobile {
+  display: none;
+  @include phones {
+    display: block;
+    margin-top: 20px;
+  }
+}
 

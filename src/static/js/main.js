@@ -3,8 +3,6 @@
 $(function () {
 
 
-
-
     /* ------------------- fancybox ------------------- */
 
     $("[data-fancybox]").fancybox({
@@ -75,6 +73,13 @@ $(function () {
             }
         });
     });
+
+
+    if(window.matchMedia('(max-width: 576px)').matches)  {
+           // $("[data-add-owl-carousel]").attr("data-owl-carousel", "").addClass();
+       console.log("работать");
+
+        }
 
     /* ------------------- ajax ------------------- */
 

@@ -6,6 +6,9 @@
   max-width: 850px;
   margin: 0 auto;
   overflow: hidden;
+  @include phones {
+    display: none;
+  }
 }
 
 .it-compare__wrap {
@@ -21,6 +24,7 @@
   width: 100%;
   margin: 0;
   //margin: 0 -50px;
+
 }
 
 .it-compare__item {

@@ -153,13 +153,14 @@
   color: #000000;
   margin: 0;
   overflow: hidden;
+  font-weight: 700;
 
   @include tablets {
     padding-top: 50px;
     padding-bottom: 30px;
   }
   @include phones {
-    font-size: rem(18px);
+    font-size: 16px;
     padding-top: 40px;
     padding-bottom: 20px;
   }
@@ -202,6 +203,7 @@
   text-align: center;
   @include phones {
     padding-bottom: 20px;
+    font-size: 14px;
   }
 }
 
