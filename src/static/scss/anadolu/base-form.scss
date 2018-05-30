@@ -20,7 +20,6 @@
   padding: 20px 20px;
   background-color: #ffffff;
   overflow: hidden;
-
 }
 
 
@@ -44,8 +43,8 @@
     max-width: 100%;
   }
   @include phones {
-    max-width: 100px;
-    flex-basis: 100px;
+    max-width: 100%;
+    flex-basis: 100%;
   }
 }
 
@@ -201,7 +200,8 @@
 }
 
 .it-base-form .it-base-form__file-btn {
-  padding-left: 40px;
+  padding-left: 35px;
+  padding-right: 5px;
   background: transparent;
   border: 1px solid #1AACCE;
   position: relative;

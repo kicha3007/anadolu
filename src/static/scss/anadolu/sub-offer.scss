@@ -5,10 +5,15 @@
 .it-sub-offer {
   background-color: #E8F0F4;
   padding: 25px 0;
+  @include phones {
+    background-color: #F3F3F3;
+  }
+
 }
 
 .it-sub-offer__wrap {
   @include row-flex();
+  position: relative;
 }
 
 
