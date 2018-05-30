@@ -73,6 +73,19 @@
   font-weight: 700;
   margin-bottom: 25px;
   color: #000000;
+  text-align: center;
+}
+
+.it-callback__subtitle {
+  font-size: 14px;
+  font-weight: 300;
+  color: #000000;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.it-callback__title + .it-callback__subtitle {
+  margin-top: -10px;
 }
 
 .it-callback__form {
@@ -148,6 +161,11 @@
   }
 }
 
+.it-callback__content {
+  @include phones {
+    display: none;
+  }
+}
 
 /******************* checkbox *******************/
 
@@ -257,6 +275,23 @@
 
 .it-checkbox--size {
   max-width: 400px;
+}
+
+.it-checkbox__link {
+  font-size: inherit;
+  color: #FF732E;
+  font-weight: inherit;
+}
+
+.it-checkbox__link :hover {
+	color: #FF732E;
+	text-decoration: none;
+}
+
+.it-checkbox__link :active,
+.it-checkbox__link :visited {
+	color: #FF732E;
+	text-decoration: none;
 }
 
 

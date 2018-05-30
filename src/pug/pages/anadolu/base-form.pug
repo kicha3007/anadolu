@@ -6,7 +6,7 @@
 			.it-base-form__half.it-base-form__half--size-full
 				input.it-base-form__input(type="text" name='NAME', maxlength='200', value='', placeholder='Имя и фамилия', required)
 			.it-base-form__half
-				input.it-base-form__input(type="text" name='AGE', maxlength='200', value='', placeholder='Возраст пациента', required)
+				input.it-base-form__input(type="text" name='AGE', maxlength='200', value='', placeholder='Возраст пациента', required data-input-number-clear)
 			.it-base-form__half
 				.it-base-form__select-wrap
 					select.it-base-form__select(name='type-of-ill', required='')
@@ -25,7 +25,7 @@
 						option(value='опухоль или вторичный очаг головного мозга')
 							|	опухоль или вторичный очаг головного мозга
 			.it-base-form__half
-				input.it-base-form__input(type='mail', name='MAIL', maxlength='200', value='', placeholder='Ваш телефон', data-phone='true', required)
+				input.it-base-form__input(type='mail', name='MAIL', maxlength='200', value='', placeholder='E-mail', required)
 			.it-base-form__half
 				input.it-base-form__input(type='tel', name='PHONE', maxlength='200', value='', placeholder='Ваш телефон', data-phone='true', required)
 			.it-base-form__half.it-base-form__half--size-full.it-base-form__half--indent
@@ -35,7 +35,9 @@
 					input.it-checkbox__default(type="checkbox" name="AGREE" checked)
 					span.it-checkbox__pseudo
 					span.it-checkbox__text
-						|	Подтверждаю свое согласие на обработку персональных данных
+						|    Подтверждаю свое согласие на &#32;
+						a(href="#it-modal-privacy" data-fancybox=).it-checkbox__link
+							|    обработку персональных данных
 			.it-base-form__buttons-wrap
 				.it-base-form__half.it-base-form__buttons.it-base-form__buttons--size-1
 					label.it-base-form__file-label

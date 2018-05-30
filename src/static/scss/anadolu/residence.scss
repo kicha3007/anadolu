@@ -85,6 +85,10 @@
 .it-residence__content {
   border: 3px solid #1AACCE ;
   padding: 25px 25px;
+  min-height: 350px;
+  @include desktop {
+    min-height: 20px;
+  }
 
 }
 

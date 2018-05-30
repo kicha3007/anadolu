@@ -129,7 +129,7 @@
 
 .it-container--mobile {
   @include phones {
-    max-width: 260px;
+    max-width: 290px;
   }
 }
 
@@ -332,6 +332,13 @@
   display: none;
   @include phones {
     display: block;
+  }
+}
+
+
+.it-all--hide-mobile {
+  @include phones {
+    display: none;
   }
 }
 

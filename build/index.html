@@ -35,7 +35,7 @@
                     <div class="it-nav__trigger" data-trigger="nav"><span class="it-nav__trigger-line it-nav__trigger-line--top"></span><span class="it-nav__trigger-line it-nav__trigger-line--middle"></span><span class="it-nav__trigger-line it-nav__trigger-line--bottom"></span></div>
                     <div class="it-main-nav__wrap" data-it-nav="nav">
                       <ul class="it-main-nav__list">
-                        <li><a href="#"><img src="static/img/anadolu/header/home.png" alt=""></a></li>
+                        <li><a href="#"><img src="static/img/anadolu/header/home.svg" alt=""></a></li>
                         <li><a href="#">	О центре</a></li>
                         <li><a href="#">	Отзывы пациентов</a></li>
                         <li><a href="#">	Наши технологии</a></li>
@@ -57,9 +57,7 @@
               <div class="it-base-offer__half it-base-offer__half--left">
                 <div class="it-base-offer__content">
                   <div class="it-base-offer__title">	Лечение рака в Турции</div>
-                  <div class="it-base-offer__desc">   Бесплатная консультация<br>от профессоров клиники о плане						br
-                    и стоимости лечения в<span>	течение 48 часов</span>
-                  </div>
+                  <div class="it-base-offer__desc">   Бесплатная консультация<br>от профессоров клиники о плане<br>и стоимости лечения в<span>	течение 48 часов</span></div>
                   <ul class="it-base-offer__info-list">
                     <li class="it-base-offer__info-item it-base-offer__info-item--icon-1">   МЦ «Анадолу» работает в партнерстве<br>со всемирно известной клиникой имени Джона Хопкинса,<br>г. Балтимор, США</li>
                     <li class="it-base-offer__info-item it-base-offer__info-item--icon-2">	МЦ «Анадолу» вошел в ТОП 10 лучших клиник мира в 2017 году согласно независимому Международному Альянсу Качества Медицинского Туризма (MTQUA)</li>
@@ -75,7 +73,7 @@
                         <input class="it-base-form__input" type="text" name="NAME" maxlength="200" value="" placeholder="Имя и фамилия" required>
                       </div>
                       <div class="it-base-form__half">
-                        <input class="it-base-form__input" type="text" name="AGE" maxlength="200" value="" placeholder="Возраст пациента" required>
+                        <input class="it-base-form__input" type="text" name="AGE" maxlength="200" value="" placeholder="Возраст пациента" required data-input-number-clear>
                       </div>
                       <div class="it-base-form__half">
                         <div class="it-base-form__select-wrap">
@@ -91,7 +89,7 @@
                         </div>
                       </div>
                       <div class="it-base-form__half">
-                        <input class="it-base-form__input" type="mail" name="MAIL" maxlength="200" value="" placeholder="Ваш телефон" data-phone="true" required>
+                        <input class="it-base-form__input" type="mail" name="MAIL" maxlength="200" value="" placeholder="E-mail" required>
                       </div>
                       <div class="it-base-form__half">
                         <input class="it-base-form__input" type="tel" name="PHONE" maxlength="200" value="" placeholder="Ваш телефон" data-phone="true" required>
@@ -101,7 +99,7 @@
                       </div>
                       <div class="it-checkbox-wrap it-base-form__checkbox-wrap">
                         <label class="it-checkbox">
-                          <input class="it-checkbox__default" type="checkbox" name="AGREE" checked><span class="it-checkbox__pseudo"></span><span class="it-checkbox__text">	Подтверждаю свое согласие на обработку персональных данных</span>
+                          <input class="it-checkbox__default" type="checkbox" name="AGREE" checked><span class="it-checkbox__pseudo"></span><span class="it-checkbox__text">   Подтверждаю свое согласие на &#32;<a class="it-checkbox__link" href="#it-modal-privacy" data-fancybox>   обработку персональных данных</a></span>
                         </label>
                       </div>
                       <div class="it-base-form__buttons-wrap">
@@ -360,12 +358,14 @@
           </div>
         </section>
         <section class="it-stages">
-          <div class="it-all-title">	Этапы лечения</div>
-          <div class="it-all-subtitle">	Переведем документы и скоординируем все этапы, включая перелет, бронь гостиницы и трансфер.</div>
+          <div class="it-container">
+            <div class="it-all-title">	Этапы лечения</div>
+            <div class="it-all-subtitle">	Переведем документы и скоординируем все этапы, включая перелет, бронь гостиницы и трансфер.</div>
+          </div>
           <ul class="it-stages__wrap">
             <li class="it-stages__item it-stages__item--bg-shadow it-stages__item--bg1 it-stages__item--mod1">
               <div class="it-container">
-                <div class="it-stages__top">
+                <div class="it-stages__top it-all--hide-mobile">
                   <div class="it-stages__numeric">
                     <div class="it-stages__numeric-number">	1</div>
                     <div class="it-stages__numeric-text">	Консультация</div>
@@ -377,7 +377,7 @@
                       <div class="it-stages__title">	Отправьте заявку</div>
                       <div class="it-stages__desc">
                         <p>	Заполните анкету и отправьте на почту anadolu.tymen@gmail.com.<br><a class="it-stages__link" href="#">&#32; Скачать анкету.</a></p>
-                        <p>   Также вы можете<a class="it-stages__link" href="#">	заполнить все необходимые поля прямо сейчас.</a></p>
+                        <p>   Также вы можете<a class="it-stages__link" href="#it-modal-questionary" data-fancybox>	заполнить все необходимые поля прямо сейчас.</a></p>
                       </div>
                     </li>
                     <li class="it-stages__bottom-item">
@@ -397,7 +397,7 @@
                 </div>
               </div>
             </li>
-            <li class="it-stages__item">
+            <li class="it-stages__item it-all--hide-mobile">
               <div class="it-container">
                 <div class="it-stages__inner-wrap">
                   <div class="it-stages__half it-stages__half--left">
@@ -427,7 +427,7 @@
                 </div>
               </div>
             </li>
-            <li class="it-stages__item it-stages__item--bg-shadow it-stages__item--bg2 it-stages__item--bg2">
+            <li class="it-stages__item it-stages__item--bg-shadow it-stages__item--bg2 it-stages__item--bg2 it-all--hide-mobile">
               <div class="it-container">
                 <div class="it-stages__inner-wrap">
                   <div class="it-stages__half it-stages__half--left">
@@ -455,10 +455,11 @@
           </ul>
         </section>
         <section class="it-callback">
-          <div class="it-container">
+          <div class="it-container it-container--mobile">
             <div class="it-callback__outer-wrap">
               <div class="it-callback__outer-half it-callback__outer-half--left">
                 <div class="it-callback__title">   Закажите консультацию:</div>
+                <div class="it-callback__subtitle">	Оставьте заявку, и мы вам перезвоним</div>
                 <form class="it-callback__form" action="" method="post">
                   <div class="it-callback__input-wrap">
                     <div class="it-callback__half">
@@ -471,7 +472,7 @@
                   </div>
                   <div class="it-checkbox-wrap it-callback__checkbox-wrap">
                     <label class="it-checkbox">
-                      <input class="it-checkbox__default" type="checkbox" name="AGREE" checked><span class="it-checkbox__pseudo"></span><span class="it-checkbox__text">   Подтверждаю свое согласие на обработку персональных данных</span>
+                      <input class="it-checkbox__default" type="checkbox" name="AGREE" checked><span class="it-checkbox__pseudo"></span><span class="it-checkbox__text">   Подтверждаю свое согласие на &#32;<a class="it-checkbox__link" href="#it-modal-privacy" data-fancybox>	обработку персональных данных</a></span>
                     </label>
                     <div class="it-form__success">Спасибо!<br> Ваша заявка принята.</div>
                   </div>
@@ -531,7 +532,7 @@
         <section class="it-reviews">
           <div class="it-all-title">	Отзывы пациентов</div>
           <div class="it-container">
-            <ul class="it-reviews__wrap">
+            <ul class="it-reviews__wrap" data-add-owl-carousel>
               <li class="it-reviews__item">
                 <div class="it-reviews__video-box">
                   <iframe width="100%" height="100%" src="https://www.youtube.com/embed/v4ahIOt9rAE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
@@ -589,7 +590,7 @@
             </ul>
           </div>
         </section>
-        <section class="it-residence">
+        <section class="it-residence it-all--indent">
           <div class="it-all-title">	Проживание в 4-звездочном отеле</div>
           <div class="it-container it-container--full">
             <div class="it-residence__wrap">
@@ -696,7 +697,7 @@
           <div class="it-all-title">	Статьи и новости</div>
           <div class="it-container it-container--full">
             <div class="it-news__wrap">
-              <ul class="it-news__list owl-carousel" data-owl-carousel data-owl-items="3" data-owl-items-pad="2">
+              <ul class="it-news__list owl-carousel" data-add-owl-carousel>
                 <li class="it-news__item">
                   <div class="it-news__top">
                     <div class="it-news__date">	22 сентября 2017 года</div>
@@ -732,10 +733,11 @@
           </div>
         </section>
         <section class="it-callback">
-          <div class="it-container">
+          <div class="it-container it-container--mobile">
             <div class="it-callback__outer-wrap">
               <div class="it-callback__outer-half it-callback__outer-half--left">
                 <div class="it-callback__title">   Закажите консультацию:</div>
+                <div class="it-callback__subtitle">	Оставьте заявку, и мы вам перезвоним</div>
                 <form class="it-callback__form" action="" method="post">
                   <div class="it-callback__input-wrap">
                     <div class="it-callback__half">
@@ -748,7 +750,7 @@
                   </div>
                   <div class="it-checkbox-wrap it-callback__checkbox-wrap">
                     <label class="it-checkbox">
-                      <input class="it-checkbox__default" type="checkbox" name="AGREE" checked><span class="it-checkbox__pseudo"></span><span class="it-checkbox__text">   Подтверждаю свое согласие на обработку персональных данных</span>
+                      <input class="it-checkbox__default" type="checkbox" name="AGREE" checked><span class="it-checkbox__pseudo"></span><span class="it-checkbox__text">   Подтверждаю свое согласие на &#32;<a class="it-checkbox__link" href="#it-modal-privacy" data-fancybox>	обработку персональных данных</a></span>
                     </label>
                     <div class="it-form__success">Спасибо!<br> Ваша заявка принята.</div>
                   </div>
@@ -772,7 +774,7 @@
                   <input class="it-base-form__input" type="text" name="NAME" maxlength="200" value="" placeholder="Имя и фамилия" required>
                 </div>
                 <div class="it-base-form__half">
-                  <input class="it-base-form__input" type="text" name="AGE" maxlength="200" value="" placeholder="Возраст пациента" required>
+                  <input class="it-base-form__input" type="text" name="AGE" maxlength="200" value="" placeholder="Возраст пациента" required data-input-number-clear>
                 </div>
                 <div class="it-base-form__half">
                   <div class="it-base-form__select-wrap">
@@ -788,7 +790,7 @@
                   </div>
                 </div>
                 <div class="it-base-form__half">
-                  <input class="it-base-form__input" type="mail" name="MAIL" maxlength="200" value="" placeholder="Ваш телефон" data-phone="true" required>
+                  <input class="it-base-form__input" type="mail" name="MAIL" maxlength="200" value="" placeholder="E-mail" required>
                 </div>
                 <div class="it-base-form__half">
                   <input class="it-base-form__input" type="tel" name="PHONE" maxlength="200" value="" placeholder="Ваш телефон" data-phone="true" required>
@@ -798,7 +800,7 @@
                 </div>
                 <div class="it-checkbox-wrap it-base-form__checkbox-wrap">
                   <label class="it-checkbox">
-                    <input class="it-checkbox__default" type="checkbox" name="AGREE" checked><span class="it-checkbox__pseudo"></span><span class="it-checkbox__text">	Подтверждаю свое согласие на обработку персональных данных</span>
+                    <input class="it-checkbox__default" type="checkbox" name="AGREE" checked><span class="it-checkbox__pseudo"></span><span class="it-checkbox__text">   Подтверждаю свое согласие на &#32;<a class="it-checkbox__link" href="#it-modal-privacy" data-fancybox>   обработку персональных данных</a></span>
                   </label>
                 </div>
                 <div class="it-base-form__buttons-wrap">
@@ -850,6 +852,23 @@
                   <div class="it-form__success">Спасибо!<br> Ваша заявка принята.</div></a>
               </form>
             </div>
+          </div>
+        </section>
+        <section class="it-modal it-modal-privacy" id="it-modal-privacy">
+          <div class="it-modal-privacy__wrap">
+            <div class="it-modal-privacy__title">   Политика обработки персональных данных</div>
+            <p>   Предоставляя свои персональные данные Пользователь даёт согласие на обработку, хранение и использование своих персональных данных на основании ФЗ № 152-ФЗ «О персональных данных» от 27.07.2006 г. в следующих целях:</p>
+            <p>
+                 Осуществление клиентской поддержки
+              Получения Пользователем информации о маркетинговых событиях
+              Проведения аудита и прочих внутренних исследований с целью повышения качества предоставляемых услуг.<br>   Под персональными данными подразумевается любая информация личного характера, позволяющая установить личность Пользователя/Покупателя такая как:
+            </p>
+            <p>- Фамилия, Имя, Отчество<br>- Дата рождения<br>- Контактный телефон<br>- Адрес электронной почты<br>- Почтовый адрес</p>
+            <p>   Персональные данные Пользователей хранятся исключительно на электронных носителях и обрабатываются с использованием автоматизированных систем, за исключением случаев, когда неавтоматизированная обработка персональных данных необходима в связи с исполнением требований законодательства.</p>
+            <p>   Компания обязуется не передавать полученные персональные данные третьим лицам, за исключением следующих случаев:</p>
+            <p>	1. По запросам уполномоченных органов государственной власти РФ только по основаниям и в порядке, установленным законодательством РФ</p>
+            <p>   2. Стратегическим партнерам, которые работают с Компанией для предоставления продуктов и услуг, или тем из них, которые помогают Компании реализовывать продукты и услуги потребителям. Мы предоставляем третьим лицам минимальный объем персональных данных, необходимый только для оказания требуемой услуги или проведения необходимой транзакции.</p>
+            <p>	Компания оставляет за собой право вносить изменения в одностороннем порядке в настоящие правила, при условии, что изменения не противоречат действующему законодательству РФ. Изменения условий настоящих правил вступают в силу после их публикации на Сайте.</p>
           </div>
         </section>
         <section class="it-footer">

@@ -1,12 +1,13 @@
 section.it-stages
-	.it-all-title
-		|	Этапы лечения
-	.it-all-subtitle
-		|	Переведем документы и скоординируем все этапы, включая перелет, бронь гостиницы и трансфер.
+	.it-container
+		.it-all-title
+			|	Этапы лечения
+		.it-all-subtitle
+			|	Переведем документы и скоординируем все этапы, включая перелет, бронь гостиницы и трансфер.
 	ul.it-stages__wrap
 		li.it-stages__item.it-stages__item--bg-shadow.it-stages__item--bg1.it-stages__item--mod1
 			.it-container
-				.it-stages__top
+				.it-stages__top.it-all--hide-mobile
 					.it-stages__numeric
 						.it-stages__numeric-number
 							|	1
@@ -21,11 +22,11 @@ section.it-stages
 								p
 									|	Заполните анкету и отправьте на почту anadolu.tymen@gmail.com.
 									br
-									a(href="#").it-stages__link
+									a(href="#", ).it-stages__link
 										| &#32; Скачать анкету.
 								p
 									|    Также вы можете
-									a(href="#").it-stages__link
+									a(href="#it-modal-questionary" data-fancybox).it-stages__link
 										|	заполнить все необходимые поля прямо сейчас.
 						li.it-stages__bottom-item
 							.it-stages__title
@@ -46,7 +47,7 @@ section.it-stages
 							.it-stages__buttons
 								a(href="#it-modal-callback").it-stages__btn.it-btn(data-fancybox=)
 									|	Узнать подробнее
-		li.it-stages__item
+		li.it-stages__item.it-all--hide-mobile
 			.it-container
 				.it-stages__inner-wrap
 					.it-stages__half.it-stages__half--left
@@ -73,7 +74,7 @@ section.it-stages
 										|	Знакомство с лечащим врачом
 									.it-stages__desc
 										|	После того, как пациент пройдет диагностические исследования (обычно ПЭТ-КТ и пересмотр патологических блоков), лечащий врач детально изложит план лечения, обозначит риски и ответит на все вопросы.  Лечение начинается в тот же день под наблюдением лечащего врача и его команды.
-		li.it-stages__item.it-stages__item--bg-shadow.it-stages__item--bg2.it-stages__item--bg2
+		li.it-stages__item.it-stages__item--bg-shadow.it-stages__item--bg2.it-stages__item--bg2.it-all--hide-mobile
 			.it-container
 				.it-stages__inner-wrap
 					.it-stages__half.it-stages__half--left

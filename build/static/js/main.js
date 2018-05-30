@@ -1,5 +1,44 @@
 /* ****************************** accordion ****************************** */
 
+function startCarousel() {
+
+    $('[data-owl-carousel]').each(function () {
+        var $this = $(this);
+        var itemsCount = $this.data("owlItems");
+        var itemsCountPad = $this.data("owlItemsPad");
+        var itemsMargin = $this.data("owlItemsMargin");
+        var itemsDots = $this.data("owlItemsDots");
+        var itemsLoop = $this.data("owlItemsLoop");
+        var itemsNav = $this.data("owlItemsNav");
+        var itemsAutoplay = $this.data("owlItemsAutoplay");
+        var itemsAutoplayTimeout = $this.data("owlItemsAutoplayTimeout");
+        var itemsAutoplayHoverPause = $this.data("owlItemsAutoplayHoverPause");
+
+        $this.owlCarousel({
+            items: (itemsCount ? itemsCount : 1),
+            margin: (itemsMargin ? itemsMargin : 20),
+            nav: (itemsNav ? itemsNav : true),
+            loop: (itemsLoop ? itemsLoop : true),
+            autoplay: (itemsAutoplay ? itemsAutoplay : false),
+            autoplayTimeout: (itemsAutoplayTimeout ? itemsAutoplayTimeout : 3000),
+            autoplayHoverPause: (itemsAutoplayHoverPause ? itemsAutoplayHoverPause : false),
+            dots: (itemsDots ? itemsDots : false),
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: itemsCountPad ? itemsCountPad : (itemsCount ? itemsCount : 1)
+                },
+                1000: {
+                    items: itemsCount ? itemsCount : 1
+                }
+            }
+        });
+    });
+
+}
+
 $(function () {
 
 
@@ -39,47 +78,31 @@ $(function () {
 
     /* ------------------- carousel-new ------------------- */
 
-    $('[data-owl-carousel]').each(function () {
-        var $this = $(this);
-        var itemsCount = $this.data("owlItems");
-        var itemsCountPad = $this.data("owlItemsPad");
-        var itemsMargin = $this.data("owlItemsMargin");
-        var itemsDots = $this.data("owlItemsDots");
-        var itemsLoop = $this.data("owlItemsLoop");
-        var itemsNav = $this.data("owlItemsNav");
-        var itemsAutoplay = $this.data("owlItemsAutoplay");
-        var itemsAutoplayTimeout = $this.data("owlItemsAutoplayTimeout");
-        var itemsAutoplayHoverPause = $this.data("owlItemsAutoplayHoverPause");
+    startCarousel();
 
-        $this.owlCarousel({
-            items: (itemsCount ? itemsCount : 1),
-            margin: (itemsMargin ? itemsMargin : 20),
-            nav: (itemsNav ? itemsNav : true),
-            loop: (itemsLoop ? itemsLoop : true),
-            autoplay: (itemsAutoplay ? itemsAutoplay : false),
-            autoplayTimeout: (itemsAutoplayTimeout ? itemsAutoplayTimeout : 3000),
-            autoplayHoverPause: (itemsAutoplayHoverPause ? itemsAutoplayHoverPause : false),
-            dots: (itemsDots ? itemsDots : false),
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: itemsCountPad ? itemsCountPad : (itemsCount ? itemsCount : 1)
-                },
-                1000: {
-                    items: itemsCount ? itemsCount : 1
-                }
-            }
-        });
-    });
+    var addOwlCarousel = $("[data-add-owl-carousel]");
 
-
-    if(window.matchMedia('(max-width: 576px)').matches)  {
-           // $("[data-add-owl-carousel]").attr("data-owl-carousel", "").addClass();
-       console.log("работать");
-
+    function mediaStartCarousel(mediaSize) {
+        if (mediaSize.matches) {
+            addOwlCarousel.attr("data-owl-carousel", "").addClass("owl-carousel");
+            startCarousel();
+        } else {
+            addOwlCarousel.removeAttr("data-owl-carousel").removeClass("owl-carousel");
+            addOwlCarousel.trigger('destroy.owl.carousel').removeClass('owl-carousel owl-loaded');
         }
+    }
+
+    /*   if(window.matchMedia('(max-width: 576px)').matches)  {
+           // ;
+           console.log("работать");
+
+       }*/
+
+    var mediaSize = window.matchMedia("screen and (max-width: 576px)");
+
+    mediaSize.addListener(mediaStartCarousel);
+
+    mediaStartCarousel(mediaSize);
 
     /* ------------------- ajax ------------------- */
 
@@ -182,28 +205,6 @@ $(function () {
     });
 
 
-    /* ****************************** dropdown-menu ****************************** */
-
-    // var $trigger = $('[data-trigger]');
-    // var $nav = $('[data-it-nav]');
-    //
-    // $trigger.on("click", function () {
-    //     var $this = $(this);
-    //     $this.toggleClass('active');
-    //     $nav.slideToggle(600, function () {
-    //         if ($(this).css("display") === "none") {
-    //             $(this).removeAttr("style");
-    //         }
-    //     });
-    //
-    // });
-    //
-    //
-
-
-
-
-
 
     $("[data-slick-show-big]").slick({
         slidesToShow: 1,
@@ -212,7 +213,6 @@ $(function () {
         fade: true,
         edgeFriction: true,
         centerMode: true
-
 
     });
 
@@ -225,13 +225,11 @@ $(function () {
         focusOnSelect: true
     });
 
-
     /* ------------------- show-more ------------------- */
 
     var showMoreButtonText = $("[data-show-more-button]");
 
-
-$("[data-it-accord-wrap-item]").hide();
+    $("[data-it-accord-wrap-item]").hide();
 
     showMoreButtonText.on("click", function (e) {
         e.preventDefault();
@@ -250,5 +248,15 @@ $("[data-it-accord-wrap-item]").hide();
         $this.toggleClass("active");
 
     });
+
+
+    /* ------------------- clear input of number ------------------- */
+
+
+    var inputNumberClear = document.querySelector("[data-input-number-clear]");
+
+    inputNumberClear.oninput = function () {
+        this.value = this.value.replace(/[^0-9]+/g, '')
+    }
 
 });

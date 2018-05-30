@@ -138,13 +138,21 @@
     margin-top: -15px;
     border-radius: 50%;
     border: 1px solid #C4C4C4;
-	background: url("../img/anadolu/directions/arrow.png") no-repeat center;
+	background-image: url("../img/anadolu/directions/arrow.png");
+    background-repeat: no-repeat;
+    background-position: center;
     pointer-events: none;
+  transition: 0.2s;
   @include phones {
       right: 10px;
       width: 25px;
       height: 25px;
   }
+}
+
+.it-directions__list  li:hover:before {
+  background-color: #1AACCE;
+  background-image: url("../img/anadolu/directions/arrow-hover.png") ;
 }
 
 .it-directions__list  li  a {

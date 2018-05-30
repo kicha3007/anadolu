@@ -2,7 +2,6 @@
 @import "../__mixins";
 @import "../smart-grid";
 
-
 .it-main-nav__wrap {
   @include tablets {
     display: none;
@@ -14,7 +13,6 @@
     background-color: #ffffff;
 
   }
-
 }
 
 .it-main-nav__list {
@@ -35,7 +33,6 @@
     padding-top: 50px;
 
   }
-
 }
 
 .it-main-nav__list > li {
@@ -57,9 +54,6 @@
   z-index: 1000;
 }
 
-
-
-
 .it-main-nav__list > li > a {
   padding: 7px 15px 3px 0;
   display: block;
@@ -77,13 +71,11 @@
     color: #4F4F4F;
     font-weight: 500;
   }
-
 }
 
 .it-main-nav__list > li:last-child > a {
   padding-right: 0;
 }
-
 
 .it-main-nav__list > li > a:active,
 .it-main-nav__list > li.active > a,
@@ -92,21 +84,15 @@
   font-weight: 400;
   text-decoration: none;
   border-color: #33C3E5;;
-
 }
-
-
 
 .it-main-nav__list > li img {
-  padding-top: 5px;
+  padding-top: 0;
 }
-
 
 //  .it-main-nav__list > li > a:visited {
 //  color: #ffffff;
 //}
-
-
 
 .it-main-nav__list > li > ul,
 .it-main-nav__list > li > ul > li > ul {
@@ -115,7 +101,6 @@
   /*opacity: 0;*/
   transition: opacity .1s;
   padding: 0;
-
   background-color: #ffffff;
 }
 
@@ -129,19 +114,13 @@
   @include tablets {
     top: 100%;
     position: static;
-    margin-bottom: 0;
     min-width: 100%;
     margin-bottom: 10px;
-
-
-
   }
 }
 
 .it-main-nav__list > li > ul > li {
   list-style-type: none;
-
-
 }
 
 .it-main-nav__list > li > ul > li > a,
@@ -172,7 +151,6 @@
   font-weight: 400;
   text-decoration: none;
   color: rgba(0, 0, 0, .87);
-
 }
 
 .it-main-nav__list > li > ul > li.active > a {
@@ -199,7 +177,6 @@
 .it-main-nav__list > li > ul > li > ul > li {
   list-style-type: none;
   padding-left: 20px;
-
 }
 
 .it-main-nav__list > li > ul > li > ul > li > a {
@@ -239,7 +216,6 @@
   top: 50%;
   right: 2px;
   transition: .2s;
-
   @include tablets {
     display: none;
 
@@ -251,15 +227,10 @@
   border-top: 5px solid rgba(0, 0, 0, .87);
 }
 
-.it-main-nav__list > li:first-child:hover a,
-.it-main-nav__list > li:first-child.active a {
-  background: url('../img/nav/2.svg') no-repeat center center;
-}
 
 .it-main-nav__list li:hover > a:after {
   transform: rotate(-90deg);
   top: 45% !important;
-
 }
 
 .it-nav__trigger {
